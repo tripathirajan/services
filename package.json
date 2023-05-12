@@ -1,6 +1,6 @@
 {
   "name": "@tripathirajan/services",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "common services used for most of the project like encryption, logger, mailer etc.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
