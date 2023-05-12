@@ -1,5 +1,5 @@
-import CloudStorage from "./CloudStorage";
-import { StorageProvider, StorageServiceType, StorageType } from "../types";
+import CloudStorage from './CloudStorage';
+import { StorageProvider, StorageServiceType, StorageType } from '../types';
 
 /**
  * Storage service

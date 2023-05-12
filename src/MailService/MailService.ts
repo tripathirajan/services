@@ -1,4 +1,4 @@
-import { SendMailOpts } from "../types";
+import { SendMailOpts } from '../types';
 
 /**
  * Mail service
@@ -12,7 +12,7 @@ class MailService {
   /**
    * Mail sent from of mail service
    */
-  private static MAIL_SENT_FROM: string = "tripathirajan3@gmail.com";
+  private static MAIL_SENT_FROM: string = 'tripathirajan3@gmail.com';
 
   /**
    * Transport  of mail service
@@ -34,9 +34,7 @@ class MailService {
   private sendMail(payload: SendMailOpts) {
     const { to, subject, body, ...rest } = payload;
     if (!to || !subject || !body) {
-      const err = new Error(
-        "Can't sent email, please check the params."
-      ) as any;
+      const err = new Error("Can't sent email, please check the params.") as any;
       err.data = payload;
       throw err;
     }
@@ -54,13 +52,13 @@ class MailService {
         ...(isHtml ? { html: body } : { text: body }),
       })
       .then((result: any) => {
-        if (callback && typeof callback === "function") {
+        if (callback && typeof callback === 'function') {
           callback(result, null);
         }
         return result;
       })
       .catch((err: any) => {
-        if (callback && typeof callback === "function") {
+        if (callback && typeof callback === 'function') {
           callback(null, err);
         }
       });

@@ -1,7 +1,7 @@
-import nodemailer from "nodemailer";
-import { SendGridConfig } from "../types";
-import { default as sendGridTransport } from "../fix";
-import MailService from "./MailService";
+import nodemailer from 'nodemailer';
+import { SendGridConfig } from '../types';
+import { default as sendGridTransport } from '../fix';
+import MailService from './MailService';
 
 /**
  * Mail service manager
@@ -30,9 +30,7 @@ class MailServiceManager {
       const options: SendGridConfig = {
         auth: { api_key: process.env.SEND_GRID_API_KEY },
       };
-      this.transport = nodemailer.createTransport(
-        sendGridTransport({ ...options })
-      );
+      this.transport = nodemailer.createTransport(sendGridTransport({ ...options }));
     }
     return this.transport;
   }

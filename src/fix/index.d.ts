@@ -1,4 +1,4 @@
-import sendGridTransport from "nodemailer-sendgrid-transport";
-declare module "nodemailer-sendgrid-transport";
+import sendGridTransport from 'nodemailer-sendgrid-transport';
+declare module 'nodemailer-sendgrid-transport';
 
 export default sendGridTransport;

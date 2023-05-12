@@ -1,9 +1,9 @@
-export type StorageType = "File" | "Cloud" | "Stream";
+export type StorageType = 'File' | 'Cloud' | 'Stream';
 
 export enum StorageServiceType {
-  FILE = "File",
-  CLOUD = "Cloud",
-  STREAM = "Stream",
+  FILE = 'File',
+  CLOUD = 'Cloud',
+  STREAM = 'Stream',
 }
 export type StorageOption =
   | {

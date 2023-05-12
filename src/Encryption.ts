@@ -1,4 +1,4 @@
-import * as bcrypt from "bcrypt";
+import * as bcrypt from 'bcrypt';
 
 /**
  * Encryption
@@ -10,8 +10,8 @@ class Encryption {
    * @returns encode
    */
   public static base64Encode(payload: string): string {
-    if (payload === undefined || !payload) return "";
-    return Buffer.from(payload).toString("base64");
+    if (payload === undefined || !payload) return '';
+    return Buffer.from(payload).toString('base64');
   }
 
   /**
@@ -20,8 +20,8 @@ class Encryption {
    * @returns decode
    */
   public static base64Decode(payload: string): string {
-    if (payload === undefined || !payload) return "";
-    return Buffer.from(payload, "base64").toString("ascii");
+    if (payload === undefined || !payload) return '';
+    return Buffer.from(payload, 'base64').toString('ascii');
   }
 
   /**
@@ -30,11 +30,8 @@ class Encryption {
    * @param [saltLen]
    * @returns hash
    */
-  public static async getHash(
-    payload: any,
-    saltLen: number = 5
-  ): Promise<string> {
-    let toReturn = "";
+  public static async getHash(payload: any, saltLen: number = 5): Promise<string> {
+    let toReturn = '';
     if (!payload) return toReturn;
     const salt = await bcrypt.genSalt(saltLen || 5);
     const hash = await bcrypt.hash(payload, salt);
@@ -48,17 +45,11 @@ class Encryption {
    * @param hash
    * @returns hash
    */
-  public static async compareHash(
-    payload: string,
-    hash: string
-  ): Promise<boolean> {
+  public static async compareHash(payload: string, hash: string): Promise<boolean> {
     if (!payload || !hash) {
       return false;
     }
-    const matched = await bcrypt.compare(
-      payload,
-      Encryption.base64Decode(hash)
-    );
+    const matched = await bcrypt.compare(payload, Encryption.base64Decode(hash));
     return matched;
   }
 }
