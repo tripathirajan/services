@@ -1,2 +1,2 @@
-# services
+# @tripathirajan/services
 common services used for many projects like: logger, mailer, crypto etc...
