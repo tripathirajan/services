@@ -1,6 +1,6 @@
 {
   "name": "@tripathirajan/storage-service",
-  "version": "1.0.0-beta",
+  "version": "1.0.1-beta",
   "description": "storage service build for cloudinary",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
