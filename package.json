@@ -1,7 +1,7 @@
 {
-  "name": "@tripathirajan/services",
+  "name": "@tripathirajan/storage-service",
   "version": "1.0.0-beta",
-  "description": "common services used for most of the project like encryption, logger, mailer etc.",
+  "description": "storage service build for cloudinary",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Rajan Tripathi <tripathirajan3@gmail.com>",
