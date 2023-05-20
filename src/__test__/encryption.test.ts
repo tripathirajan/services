@@ -1,4 +1,4 @@
-import { default as Encryption } from '../Encryption';
+import { default as Encryption } from '../CryptoService/Hashing';
 
 describe('Encryption: base64Encode', () => {
   test('Should called once', () => {
