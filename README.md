@@ -16,9 +16,12 @@ yarn add @tripathirajan/storage-service
 
 ## Usage
 
-```js
+```javascript
 const { StorageService, StorageServiceType } = require('@tripathirajan/storage-service');
-const storageService = new StorageService(StorageServiceType.CLOUD); //you have to pass service type. it can be: Cloud or File. By default it will use cloud service for uploads
+// You have to pass service type. it can be: Cloud or File.
+// By default it will use cloud service for uploads
+const storageService = new StorageService(StorageServiceType.CLOUD);
+
 // pass file buffer as 1st param, want to upload and options as 2nd params
 storageService.upload(fileBuffer, { fileName });
 ```
